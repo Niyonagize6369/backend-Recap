@@ -7,7 +7,7 @@ import { Application } from "express";
  dotenv.config();
 
   const app :Application = express();
-  const PORT = process.env.PORT || 4005
+  const PORT = process.env.PORT || 4000
   app.use (cors())
 
   app.get("/", (req, res) =>{
