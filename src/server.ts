@@ -8,11 +8,12 @@ import { Application } from "express";
 
   const app :Application = express();
   const PORT = process.env.PORT || 4005
+  app.use (cors())
 
   app.get("/", (req, res) =>{
     res.send("welcome");
   });
 
   app.listen(PORT, () => {
-    console.log(`our app listening ${PORT}`);
+    console.log(`our app ---- ${PORT}`);
   })
