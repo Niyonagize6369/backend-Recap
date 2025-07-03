@@ -7,11 +7,12 @@ import { Application } from "express";
  dotenv.config();
 
   const app :Application = express();
+  const PORT = process.env.PORT || 4005
 
   app.get("/", (req, res) =>{
     res.send("welcome");
   });
 
-  app.listen(4004, () => {
-    console.log('our app listening 4004');
+  app.listen(PORT, () => {
+    console.log(`our app listening ${PORT}`);
   })
